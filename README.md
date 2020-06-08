@@ -4,7 +4,6 @@ The official version of this project is in the Middlesex School Programming Club
 
 Monopoly.js is an interface <br>
 RailRoadMonopoly.js, Color.js, and UtilityMonopoly.js implement the Monopoly Interface<br>
-<br>
 
 Location.js is a class
 Tax, Chance, and CommunityChest extend Location
