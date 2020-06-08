@@ -13,4 +13,6 @@ module.exports = Object.freeze({
   2_RR_RENT = 50,
   3_RR_RENT = 100,
   4_RR_RENT = 200,
+  UTILITY_INIT_RENT = 4,
+  UTILITY_PRICE = 150,
 });

@@ -20,6 +20,14 @@ class Property extends Ownable{
 		return numHotels;
 	}
 
+	getRent(diceRoll){
+		return rent;
+	}
+
+	getRent() {
+		return curRent;
+	}
+
 	addHouse() {
 		if(this.color.houseCanBeAdded(this)){
 			if(numHouses<=4) {

@@ -1,18 +1,22 @@
 const Constants = require('../shared/constants');
 
-class RailRoad extends Ownable{
+class Utility extends Ownable{
   constructor(name,position,rent) {
     this.name = name;
     this.position = position;
-    this.rent = rent;
-    this.price = Constants.RAILROAD_PRICE;
+    this.rent= rent;
+    this.owner = null;
+  }
+
+  setOwner(owner) {
+    this.owner = owner;
   }
 
   getRent(diceRoll){
-    return rent;
+    return rent*diceRoll;
   }
 
   setRent(x) {
-    this.rent =x;
+    this.rent = x;
   }
 }

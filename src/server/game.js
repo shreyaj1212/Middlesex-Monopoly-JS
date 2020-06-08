@@ -30,7 +30,8 @@ class Game{
    * takes a turn for the player
    */
   takeTurn(player) {
-    player.addToPosition(rollDice());
+    var diceRoll = rollDice();
+    player.addToPosition(diceRoll);
 		if(player.getPosition()>=Constants.BOARD_LENGTH) {
 			player.updateWealth(Constants.PASS_GO_WEALTH);
 			player.modPositionByBoardLength();
@@ -49,7 +50,7 @@ class Game{
 		}
 		else{
 			if(curLoc.isOwned()) {
-				player.updateWealth(-1*curLoc.getCurrentRent());
+				player.updateWealth(-1*curLoc.getRent(diceRoll));
 			}
 			else{
 				// ask user if they would like to buy this property
