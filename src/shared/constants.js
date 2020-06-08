@@ -4,4 +4,13 @@ module.exports = Object.freeze({
   PASS_GO_WEALTH = 200,
   STARTING_POS = 0,
   BOARD_LENGTH = 32,
+  WRITING_WORKSHOP_POSITION = 10,
+  MAX_DICE_ROLL = 12,
+  ASK_TO_BUY = "Would you like to buy this property?",
+  NUM_CHANCE_FORTUNES = 4,
+  RAILROAD_PRICE = 200,
+  1_RR_RENT = 25,
+  2_RR_RENT = 50,
+  3_RR_RENT = 100,
+  4_RR_RENT = 200,
 });

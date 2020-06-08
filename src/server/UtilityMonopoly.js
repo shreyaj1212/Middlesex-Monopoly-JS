@@ -1,5 +1,9 @@
-class UtilityMonopoly extends Monopoly{
+class UtilityMonopoly implements Monopoly{
 	constructor() {
+
+	}
+
+	updateRents() {
 
 	}
 }

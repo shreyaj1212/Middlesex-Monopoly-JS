@@ -1,14 +1,8 @@
-class Monopoly{
+interface Monopoly{
 	constructor(locationsIncluded) {
 		this.locationsIncluded = locationsIncluded;
 		this.isMonopoly = false;
 	}
-
-	updateMonopolyStatus() {
-
-	}
-
-	updateRents() {
-		
-	}
+	public void updateMonopolyStatus();
+	public void updateRents();
 }

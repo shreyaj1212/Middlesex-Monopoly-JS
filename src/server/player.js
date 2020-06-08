@@ -1,10 +1,10 @@
-const Constants = require('../constants');
+const Constants = require('../shared/constants');
 
 class Player{
-	constructor(nom) {
-		this.name = nom;
+	constructor(name) {
+		this.name = name;
 		this.wealth = Constants.STARTING_WEALTH;
-		this.injail = false;
+		this.inww = false;
 		this.ownables = {};
 		this.pos = Constants.STARTING_POS;
 	}
@@ -23,18 +23,24 @@ class Player{
 		c.updateMonopolyStatus();
 	}
 
-	move(x) {
-		pos+=x;
-		if(pos>=Constants.BOARD_LENGTH) {
-			updateWealth(Constants.PASS_GO_WEALTH);
-			pos = pos%Constants.BOARD_LENGTH;
-		}
-		var curLoc = Constants.BOARD[pos]; // need to define BOARD in constants.js
-		if(curLoc.isChanceOrCommChest()) {
-			curLoc.executeFortune(); // need to define this
-		}
-		else if (curLoc.isOwnable()) {
-			
-		}
+	getPosition(){
+		return this.pos;
+	}
+
+	modPositionByBoardLength() {
+		pos = pos%Constants.BOARD_LENGTH;
+	}
+
+	addToPosition(x) {
+		this.pos=this.pos+x;
+	}
+
+	sendToJail() {
+		this.inww= true;
+		pos = Constants.WRITING_WORKSHOP_POSITION;
+	}
+
+	releaseFromJail() {
+		this.inww = false;
 	}
 }

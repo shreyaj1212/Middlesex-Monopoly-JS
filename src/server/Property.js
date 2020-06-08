@@ -1,3 +1,5 @@
+const Constants = require('../shared/constants');
+
 class Property extends Ownable{
 	constructor(name,priceOfHouse,rents,color) {
 		this.name = name;
@@ -20,9 +22,17 @@ class Property extends Ownable{
 
 	addHouse() {
 		if(this.color.houseCanBeAdded(this)){
-			numHouses=numHouses+1;
-			this.owner.updateWealth(-1*priceOfHouse);
-			updateRent();
+			if(numHouses<=4) {
+				numHouses=numHouses+1;
+				this.owner.updateWealth(-1*priceOfHouse);
+				updateRent();
+			}
+			else {
+				// you cannot add another house; you must add a hotel
+			}
+		}
+		else{
+			// you must add enough homes at your other properties first
 		}
 	}
 
