@@ -1,0 +1,1 @@
+import { updateLeaderboard } from './leaderboard';

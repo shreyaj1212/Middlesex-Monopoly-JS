@@ -15,4 +15,11 @@ module.exports = Object.freeze({
   4_RR_RENT = 200,
   UTILITY_INIT_RENT = 4,
   UTILITY_PRICE = 150,
+  MAP_SIZE: 3000,
+  MSG_TYPES: {
+    JOIN_GAME: 'join_game',
+    GAME_UPDATE: 'update',
+    INPUT: 'input',
+    GAME_OVER: 'dead',
+  },
 });

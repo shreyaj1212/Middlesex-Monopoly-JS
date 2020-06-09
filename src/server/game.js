@@ -11,7 +11,7 @@ class Game{
   }
 
   /*
-   * will add a player from the game
+   * adds a player from the game
    */
   addPlayer(socket, username) {
     this.sockets[socket.id] = socket;
@@ -19,7 +19,7 @@ class Game{
   }
 
   /*
-   * will remove a player from the game
+   * removes a player from the game
    */
   removePlayer(socket) {
     delete this.sockets[socket.id];
@@ -53,17 +53,18 @@ class Game{
 				player.updateWealth(-1*curLoc.getRent(diceRoll));
 			}
 			else{
-				// ask user if they would like to buy this property
-					// if the user says yes, then execute the transaction
+				handlePurchaseInput(curLoc);
 			}
 		}
   }
 
-  // handlePurchaseInput(socket,yahOrNah) {
-  //   if (this.players[socket.id]) {
-  //     this.players[socket.id].setDirection(dir);
-  //   }
-  // }
+  handlePurchaseInput(socket, yaOrNa,player) {
+    if (this.players[socket.id]){
+      if(yaOrNa) {
+        player.buyOwnable(p);
+      }
+    }
+  }
 
   /*
    * generates a random number from 1 to 12
