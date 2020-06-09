@@ -8,4 +8,5 @@ RailRoadMonopoly.js, Color.js, and UtilityMonopoly.js implement the Monopoly Int
 Location.js is a class <br>
 Tax, Chance, and CommunityChest extend Location<br>
 Ownable extends Location<br>
-RailRoad, Property, and Utility extend Ownable<br>
+RailRoad, Property, and Utility extend Ownable<br><br>
+Got a lot of help from https://victorzhou.com/blog/build-an-io-game-part-1/
