@@ -1,3 +1,6 @@
+/**
+ * @author Shreya Jain
+ */
 class Color implements Monopoly{
 	constructor(name, propsInc) {
 		this.name = name;
