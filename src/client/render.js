@@ -9,7 +9,7 @@ const { PLAYER_RADIUS, PLAYER_MAX_HP, BULLET_RADIUS, MAP_SIZE } = Constants;
 
 // Get the canvas graphics context
 // document is the HTML document
-const canvas = document.getElementById('game-canvas');
+const canvas = document.getElementById('Board');
 const context = canvas.getContext('2d');
 setCanvasDimensions();
 
