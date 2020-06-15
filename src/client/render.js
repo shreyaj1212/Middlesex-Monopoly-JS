@@ -21,7 +21,7 @@ function setCanvasDimensions() {
   canvas.height = scaleRatio * window.innerHeight;
 }
 
-window.addEventListener('resize', debounce(40, setCanvasDimensions));
+// window.addEventListener('resize', debounce(40, setCanvasDimensions));
 
 function render() {
   const { me, others, bullets } = getCurrentState();

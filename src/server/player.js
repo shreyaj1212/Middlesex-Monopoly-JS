@@ -9,11 +9,18 @@ class Player{
 		this.pos = Constants.STARTING_POS;
 	}
 
+	/*
+	 * adds x to wealth; x can be negative
+	 * or positive
+	 */
 	updateWealth(x) {
 		if(this.wealth+x<0) return Constants.INSUFFICIENT_FUNDS;
 		else this.wealth=this.wealth+x;
 	}
 
+	/*
+	 * precondition: ownable is of type Ownable
+	 */
 	buyOwnable(ownable) {
 		var price = ownable.getPrice();
 		updateWealth(-1*price);
@@ -31,10 +38,17 @@ class Player{
 		pos = pos%Constants.BOARD_LENGTH;
 	}
 
+	/*
+	 * will move the player to posiiton x
+	 * on the board
+	 */
 	addToPosition(x) {
 		this.pos=this.pos+x;
 	}
 
+	/*
+	 * send to Writing Workshop
+	 */
 	sendToJail() {
 		this.inww= true;
 		pos = Constants.WRITING_WORKSHOP_POSITION;

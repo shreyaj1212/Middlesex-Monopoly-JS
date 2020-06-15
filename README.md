@@ -1,8 +1,7 @@
 # Middlesex-Monopoly-Shreya-JS
 
-The official version of this project is in the Middlesex School Programming Club Group on GitHub. All of the code in that version is in PHP, but I want to give it a try in JavaScript, so I've made a new repository so as not to interrupt the rest of the group's progress. 
+The official version of this project is in the Middlesex School Programming Club Group on GitHub. All of the code in that version is in PHP, but I want to give it a try in JavaScript, so I've made a new repository so as not to interrupt the rest of the group's progress.
 =======
-
 Documentation Notes
 =======
 Monopoly.js is an interface <br>
@@ -12,4 +11,4 @@ Location.js is a class <br>
 Tax, Chance, and CommunityChest extend Location<br>
 Ownable extends Location<br>
 RailRoad, Property, and Utility extend Ownable<br><br>
-Got a lot of help from https://victorzhou.com/blog/build-an-io-game-part-1/
+Got a lot of help regarding the structure of this program from https://victorzhou.com/blog/build-an-io-game-part-1/

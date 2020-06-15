@@ -58,6 +58,10 @@ class Game{
 		}
   }
 
+  play() {
+    
+  }
+
   handlePurchaseInput(socket, yaOrNa,player) {
     if (this.players[socket.id]){
       if(yaOrNa) {

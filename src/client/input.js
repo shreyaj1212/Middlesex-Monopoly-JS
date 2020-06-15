@@ -16,5 +16,5 @@ export function stopCapturingInput() {
  * so the HTML id of the button clicked can be a parameter for this method?
  */
 function handleInput(htmlID) {
-  
+
 }
