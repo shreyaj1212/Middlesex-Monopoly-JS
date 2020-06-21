@@ -1,3 +1,6 @@
+/**
+ * @author Shreya Jain
+ */
 const Constants = require('../shared/constants');
 
 class Location{
@@ -11,12 +14,16 @@ class Location{
 		return position;
 	}
 
+	/*
+	 * returns true if Location is the
+	 * "Go To Writing Workshop" Location
+	 */
 	isGoToWW() {
-		return this.position == Constants.WRITING_WORKSHOP_POSITION	;
+		return this.position == Constants.GO_TO_WW_POS;
 	}
 
 	isTax() {
-		return this.type.equals("Textbook Tax") || this.type.equals("Karma Tax");
+		return this.position == Constants.TEXTBOOK_TAX_POS || this.position == Constants.KARMA_TAX_POS;
 	}
 
 	isChanceOrCommChest() {

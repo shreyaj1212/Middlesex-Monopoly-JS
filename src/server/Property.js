@@ -1,3 +1,6 @@
+/**
+ * @author Shreya Jain
+ */
 const Constants = require('../shared/constants');
 
 class Property extends Ownable{

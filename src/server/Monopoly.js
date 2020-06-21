@@ -1,3 +1,6 @@
+/**
+ * @author Shreya Jain
+ */
 interface Monopoly{
 	constructor(locationsIncluded) {
 		this.locationsIncluded = locationsIncluded;

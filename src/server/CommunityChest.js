@@ -1,3 +1,6 @@
+/**
+ * @author Shreya Jain
+ */
 const Constants = require('../shared/constants');
 
 class CommunityChest extends Location{
@@ -15,6 +18,9 @@ class CommunityChest extends Location{
     return fortuneList[fortuneNum];
   }
 
+  /*
+   * applies the fortune to the player
+   */
   executeFortune(player){
     var fortune = generateRandomFortune();
     fortune.applyWealthImpact(player);

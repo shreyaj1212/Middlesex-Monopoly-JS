@@ -9,17 +9,17 @@ const { PLAYER_RADIUS, PLAYER_MAX_HP, BULLET_RADIUS, MAP_SIZE } = Constants;
 
 // Get the canvas graphics context
 // document is the HTML document
-const canvas = document.getElementById('Board');
-const context = canvas.getContext('2d');
-setCanvasDimensions();
+// const canvas = document.getElementById('Board');
+// const context = canvas.getContext('2d');
+// setCanvasDimensions();
 
-function setCanvasDimensions() {
-  // On small screens (e.g. phones), we want to "zoom out" so players can still see at least
-  // 800 in-game units of width.
-  const scaleRatio = Math.max(1, 800 / window.innerWidth);
-  canvas.width = scaleRatio * window.innerWidth;
-  canvas.height = scaleRatio * window.innerHeight;
-}
+// function setCanvasDimensions() {
+//   // On small screens (e.g. phones), we want to "zoom out" so players can still see at least
+//   // 800 in-game units of width.
+//   const scaleRatio = Math.max(1, 800 / window.innerWidth);
+//   canvas.width = scaleRatio * window.innerWidth;
+//   canvas.height = scaleRatio * window.innerHeight;
+// }
 
 // window.addEventListener('resize', debounce(40, setCanvasDimensions));
 
@@ -42,22 +42,22 @@ function render() {
   others.forEach(renderPlayer.bind(null, me));
 }
 
-function renderBackground(x, y) {
-  const backgroundX = MAP_SIZE / 2 - x + canvas.width / 2;
-  const backgroundY = MAP_SIZE / 2 - y + canvas.height / 2;
-  const backgroundGradient = context.createRadialGradient(
-    backgroundX,
-    backgroundY,
-    MAP_SIZE / 10,
-    backgroundX,
-    backgroundY,
-    MAP_SIZE / 2,
-  );
-  backgroundGradient.addColorStop(0, 'black');
-  backgroundGradient.addColorStop(1, 'gray');
-  context.fillStyle = backgroundGradient;
-  context.fillRect(0, 0, canvas.width, canvas.height);
-}
+// function renderBackground(x, y) {
+//   const backgroundX = MAP_SIZE / 2 - x + canvas.width / 2;
+//   const backgroundY = MAP_SIZE / 2 - y + canvas.height / 2;
+//   const backgroundGradient = context.createRadialGradient(
+//     backgroundX,
+//     backgroundY,
+//     MAP_SIZE / 10,
+//     backgroundX,
+//     backgroundY,
+//     MAP_SIZE / 2,
+//   );
+//   backgroundGradient.addColorStop(0, 'black');
+//   backgroundGradient.addColorStop(1, 'gray');
+//   context.fillStyle = backgroundGradient;
+//   context.fillRect(0, 0, canvas.width, canvas.height);
+// }
 
 // Renders a ship at the given coordinates
 function renderPlayer(me, player) {
@@ -66,6 +66,9 @@ function renderPlayer(me, player) {
   const canvasX = canvas.width / 2 + x - me.x;
   const canvasY = canvas.height / 2 + y - me.y;
 
+  if(positionOnBoard<=0 && positionOnBoard<10) {
+    
+  }
   // Draw player
   context.save();
   context.translate(canvasX, canvasY);

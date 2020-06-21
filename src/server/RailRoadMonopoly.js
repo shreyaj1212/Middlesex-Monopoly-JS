@@ -1,3 +1,6 @@
+/**
+ * @author Shreya Jain
+ */
 class RailRoadMonopoly implements Monopoly{
   constructor(propertiesIncluded) {
     this.propertiesIncluded = propertiesIncluded;

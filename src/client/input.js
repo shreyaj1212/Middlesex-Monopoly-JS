@@ -1,4 +1,4 @@
-import { takeTurn } from './networking';
+import { play } from './networking';
 
 /*
  * I think Monopoly only needs click inputs...I might be wrong we'll see
@@ -16,5 +16,10 @@ export function stopCapturingInput() {
  * so the HTML id of the button clicked can be a parameter for this method?
  */
 function handleInput(htmlID) {
+  if(htmlID.equals("roll-dice-button")) {
+    takeTurn();
+  }
+  else if(htmlID.equals("buy")) {
 
+  }
 }

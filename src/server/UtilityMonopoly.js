@@ -1,3 +1,6 @@
+/**
+ * @author Shreya Jain
+ */
 class UtilityMonopoly implements Monopoly{
 	constructor(propertiesIncluded) {
 		this.propertiesIncluded = propertiesIncluded;

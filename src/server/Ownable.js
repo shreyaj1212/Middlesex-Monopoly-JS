@@ -1,3 +1,6 @@
+/**
+ * @author Shreya Jain
+ */
 const Constants = require('../shared/constants');
 
 class Ownable extends Location{
@@ -9,6 +12,13 @@ class Ownable extends Location{
 		this.owner = owner;
 		this.currentRent = currentRent;
 		this.futureRent = futureRent;
+	}
+
+	/*
+	 * returns name of ownable
+	 */
+	getName(){
+		return this.name;
 	}
 
 	/*

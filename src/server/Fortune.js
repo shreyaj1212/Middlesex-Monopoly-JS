@@ -1,3 +1,6 @@
+/**
+ * @author Shreya Jain
+ */
 class Fortune {
   constructor(string,wealthImpact) {
     this.string=string;
