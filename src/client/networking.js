@@ -16,12 +16,12 @@ export const play = username => {
   socket.emit(Constants.MSG_TYPES.JOIN_GAME, username);
 };
 
-export const roll_dice => {
-  socket.emit(Constants.MSG_TYPES.ROLL_DICE_INPUT);
+export const roll_dice = username => {
+  socket.emit(Constants.MSG_TYPES.ROLL_DICE_INPUT, username);
 };
 
-export const buy_property => {
-  socket.emit(Constants.MSG_TYPES.BUY_PROPERTY_INPUT);
+export const buy_property = username => {
+  socket.emit(Constants.MSG_TYPES.BUY_PROPERTY_INPUT, username);
 };
 
 export const connect = onGameOver => (

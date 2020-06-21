@@ -1,5 +1,4 @@
 # Middlesex-Monopoly-Shreya-JS
-=======
 Documentation Notes
 =======
 Monopoly.js is an interface <br>

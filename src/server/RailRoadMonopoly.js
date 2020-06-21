@@ -18,16 +18,16 @@ class RailRoadMonopoly implements Monopoly{
         }
       }
       if(count==1) {
-        p.setRent(1_RR_RENT);
+        p.setRent(FIRST_RR_RENT);
       }
       else if(count==2) {
-        p.setRent(2_RR_RENT);
+        p.setRent(SECOND_RR_RENT);
       }
       else if(count==3) {
-        p.setRent(3_RR_RENT);
+        p.setRent(THIRD_RR_RENT);
       }
       else if(count==4) {
-        p.setRent(4_RR_RENT);
+        p.setRent(FOURTH_RR_RENT);
       }
     }
   }
