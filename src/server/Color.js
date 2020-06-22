@@ -1,9 +1,11 @@
 /**
  * @author Shreya Jain
  */
+ const Constants = require('constants');
 
- const Player = require('./player');
- const Property = require('./Property');
+ // const Player = require('player');
+ // const Property = require('Property');
+ // const Location = require('location');
 
  class Color { //implements Monopoly{
  	constructor(name) {
@@ -12,19 +14,13 @@
  		this.isMonopoly = false;
  	}
 
-   getProperties() {
-     return this.propertiesIncluded;
-   }
+  getProperties() {
+    return this.propertiesIncluded;
+  }
 
  	getName() {
  		return this.name;
  	}
-
- 	// constructor(name) {
- 	// 	this.name = name;
- 	// 	this.propertiesIncluded = [];
- 	// 	this.isMonopoly = false;
- 	// }
 
  	addProperty(property) {
  		this.propertiesIncluded.push(property);
@@ -47,6 +43,10 @@
  		return false;
  	}
 
+  /*
+   * returns true if the two properties passed as parameters
+   * have the same owners.
+   */
  	haveSameOwners(p1,p2){
  		return p1.getOwner().equals(p2.getOwner())
  	}
@@ -71,6 +71,10 @@
  		}
  	}
 
+  /*
+   * the rule is that rents are doubled for all of the properties
+   * in a color if the color is a monopoly
+   */
  	doubleRents() {
  		for(var i = 0;i<propertiesIncluded.length;i++) {
  			if(p.getNumHouses()==0){

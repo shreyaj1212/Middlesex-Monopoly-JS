@@ -4,7 +4,7 @@
 // const Constants = require('../shared/constants');
 //
 
-const Fortune = require('./Fortune');
+const Fortune = require('Fortune');
 
 class Chance extends Location{
   constructor(position) {

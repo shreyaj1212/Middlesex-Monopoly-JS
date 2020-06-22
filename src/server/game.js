@@ -1,8 +1,8 @@
 /**
  * @author Shreya Jain
  */
-const Constants = require('../shared/constants');
-const Player = require('./player');
+const Constants = require('constants');
+const Player = require('player');
 
 class Game{
   constructor() {
@@ -62,6 +62,10 @@ class Game{
     this.board.push(new CommunityChest(36));
     this.board.push(new Property("Chapel Bells",350,200,[35,175,500,1100,1300,1500],colors[7],37));
     this.board.push(new Property("Chapel Podium",400,200,[40,200,600,1400,1700,2000],colors[7],39));
+  }
+
+  getBoard() {
+    return this.board;
   }
 
   /*

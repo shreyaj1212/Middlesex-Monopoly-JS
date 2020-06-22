@@ -2,13 +2,13 @@
  * @author Shreya Jain
  */
 
-const Player = require('./player');
+// const Player = require('player');
 
 class Fortune {
    constructor(string,wealthImpact) {
-   this.string=string;
-   this.wealthImpact = wealthImpact;
- }
+     this.string=string;
+     this.wealthImpact = wealthImpact;
+   }
 
    getString() {
      return this.string;
