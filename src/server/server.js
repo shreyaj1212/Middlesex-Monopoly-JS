@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const socketio = require('socket.io');
 
-const Constants = require('../shared/constants');
+const Constants = require("../shared/constants");
 const Game = require('./game');
 const webpackConfig = require('../../webpack.dev.js');
 

@@ -1,17 +1,30 @@
 /**
  * @author Shreya Jain
  */
+
+const Player = require('./player');
+
 class Fortune {
-  constructor(string,wealthImpact) {
-    this.string=string;
-    this.wealthImpact = wealthImpact;
-  }
+   constructor(string,wealthImpact) {
+   this.string=string;
+   this.wealthImpact = wealthImpact;
+ }
 
-  getString() {
-    return this.string;
-  }
+   getString() {
+     return this.string;
+   }
 
-  applyWealthImpact(person) {
-    person.updateWealth(wealthImpact);
-  }
-}
+   toString() {
+     return this.string;
+   }
+
+   applyWealthImpact(person) {
+     person.updateWealth(wealthImpact);
+   }
+
+   getWealthImpact() {
+     return this.wealthImpact;
+   }
+ }
+
+module.exports = Fortune;
