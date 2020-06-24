@@ -2,11 +2,11 @@
  * @author Shreya Jain
  */
 // const Constants = require('../shared/constants');
-const Constants = require('constants');
+const Constants = require('./constants');
 
-const Ownable = require('Ownable');
-const Player = require('Player');
-const Location = require('location');
+const Ownable = require('./Ownable');
+const Player = require('./player');
+const Location = require('./location');
 
 class Property extends Ownable{
 	constructor(name,price,poh,rents,color,pos) {
@@ -68,6 +68,10 @@ class Property extends Ownable{
 				curRent = rents[5];
 			}
 		}
+	}
+
+	toString() {
+		return this.name;
 	}
 }
 

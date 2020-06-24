@@ -2,9 +2,9 @@
  * @author Shreya Jain
  */
 
- const Constants = require('constants');
+ const Constants = require('./constants');
 
- const RailRoad = require('RailRoad');
+ const RailRoad = require('./RailRoad');
 
  class RailRoadMonopoly {// implements Monopoly{
    constructor(propertiesIncluded) {

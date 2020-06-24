@@ -2,7 +2,7 @@
  * @author Shreya Jain
  */
 
-// const Player = require('player');
+const Color = require('color');
 
 class Fortune {
    constructor(string,wealthImpact) {
@@ -10,21 +10,21 @@ class Fortune {
      this.wealthImpact = wealthImpact;
    }
 
-   getString() {
-     return this.string;
-   }
-
    toString() {
      return this.string;
    }
 
-   applyWealthImpact(person) {
-     person.updateWealth(wealthImpact);
-   }
+   // applyWealthImpact(person) {
+   //   person.updateWealth(wealthImpact);
+   // }
 
    getWealthImpact() {
      return this.wealthImpact;
    }
  }
 
-module.exports = Fortune;
+var poo = new Fortune("Ay Caramba! You have to wait in line for the stirfry machine!",-50);
+console.log(poo);
+console.log(poo.getWealthImpact());
+console.log(module.exports = Fortune);
+// console.log(new Color("Purple"));

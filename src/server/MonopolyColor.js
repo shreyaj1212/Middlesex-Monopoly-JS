@@ -7,7 +7,7 @@
  // const Property = require('Property');
  // const Location = require('location');
 
- class Color { //implements Monopoly{
+ class MonopolyColor { //implements Monopoly{
  	constructor(name) {
  		this.name = name;
  		this.propertiesIncluded = [];
@@ -33,43 +33,43 @@
  	 * distributed amongst all of the properties included in
  	 * this monopoly
  	 */
- 	houseCanBeAdded(p) {
- 		for(var i=0;i<this.propertiesIncluded.length;i++) {
- 			var temp = propertiesIncluded[i];
- 			if(temp.getNumHouses()==p.getNumHouses()||temp.getNumHouses()==p.getNumHouses()+1) {
- 				return true;
- 			}
- 		}
- 		return false;
- 	}
+ 	// houseCanBeAdded(p) {
+ 	// 	for(var i=0;i<this.propertiesIncluded.length;i++) {
+ 	// 		var temp = propertiesIncluded[i];
+ 	// 		if(temp.getNumHouses()==p.getNumHouses()||temp.getNumHouses()==p.getNumHouses()+1) {
+ 	// 			return true;
+ 	// 		}
+ 	// 	}
+ 	// 	return false;
+ 	// }
 
   /*
    * returns true if the two properties passed as parameters
    * have the same owners.
    */
- 	haveSameOwners(p1,p2){
- 		return p1.getOwner().equals(p2.getOwner())
- 	}
+ 	// haveSameOwners(p1,p2){
+ 	// 	return p1.getOwner().equals(p2.getOwner())
+ 	// }
 
- 	updateMonopolyStatus() {
- 		var prevStat = this.isMonopoly;
- 		for(var i=0;i<propertiesIncluded.length;i++) {
- 			if(!propertiesIncluded[i].isOwned()){
- 				this.isMonopoly = false;
- 				return;
- 			}
- 			for(var j=i;j<propertiesIncluded.length;j++) {
- 				if(!haveSameOwners(propertiesIncluded[i],propertiesIncluded[j])) {
- 					this.isMonopoly=false;
- 					return;
- 				}
- 			}
- 		}
- 		this.isMonopoly=true;
- 		if(!prevStat && this.isMonopoly) {
- 			doubleRents();
- 		}
- 	}
+ 	// updateMonopolyStatus() {
+ 	// 	var prevStat = this.isMonopoly;
+ 	// 	for(var i=0;i<propertiesIncluded.length;i++) {
+ 	// 		if(!propertiesIncluded[i].isOwned()){
+ 	// 			this.isMonopoly = false;
+ 	// 			return;
+ 	// 		}
+ 	// 		for(var j=i;j<propertiesIncluded.length;j++) {
+ 	// 			if(!haveSameOwners(propertiesIncluded[i],propertiesIncluded[j])) {
+ 	// 				this.isMonopoly=false;
+ 	// 				return;
+ 	// 			}
+ 	// 		}
+ 	// 	}
+ 	// 	this.isMonopoly=true;
+ 	// 	if(!prevStat && this.isMonopoly) {
+ 	// 		doubleRents();
+ 	// 	}
+ 	// }
 
   /*
    * the rule is that rents are doubled for all of the properties
@@ -82,5 +82,9 @@
  			}
  		}
  	}
- }
-module.exports = Color;
+}
+
+var purple = new MonopolyColor("purple");
+console.log(purple);
+module.exports = MonopolyColor;
+console.log(module.exports);

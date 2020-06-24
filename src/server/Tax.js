@@ -3,7 +3,8 @@
  */
 // const Constants = require('../shared/constants');
 //
-const Location = require('location');
+const Location = require('./location');
+
 class Tax extends Location{
   constructor(name, tax_amt,position) {
     super(name, position);
@@ -17,3 +18,5 @@ class Tax extends Location{
     player.updateWealth(-1*taxAmt);
   }
 }
+
+module.exports = Tax;

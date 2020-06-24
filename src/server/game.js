@@ -1,8 +1,18 @@
 /**
  * @author Shreya Jain
  */
-const Constants = require('constants');
-const Player = require('player');
+const Constants = require('./constants');
+const Player = require('./player');
+const MonopolyColor = require('./MonopolyColor');
+const Location = require('./location');
+const Property = require('./Property');
+const CommunityChest = require('./CommunityChest');
+const Chance = require('./Chance');
+const RailRoad = require('./RailRoad');
+const Utility = require('./Utility');
+const UtilityMonopoly = require('./UtilityMonopoly');
+const RailRoadMonopoly = require('./RailRoadMonopoly');
+const Tax = require('./Tax');
 
 class Game{
   constructor() {
@@ -14,54 +24,55 @@ class Game{
     // CREATING THE BOARD
     this.colors = [];
     this.board = [];
-    this.colors.push(new Color("Purple"));
-    this.colors.push(new Color("Light Blue"));
-    this.colors.push(new Color("Pink"));
-    this.colors.push(new Color("Orange"));
-    this.colors.push(new Color("Red"));
-    this.colors.push(new Color("Yellow"));
-    this.colors.push(new Color("Green"));
-    this.colors.push(new Color("Blue"));
+
+    this.colors.push(new MonopolyColor("Purple"));
+    this.colors.push(new MonopolyColor("Light Blue"));
+    this.colors.push(new MonopolyColor("Pink"));
+    this.colors.push(new MonopolyColor("Orange"));
+    this.colors.push(new MonopolyColor("Red"));
+    this.colors.push(new MonopolyColor("Yellow"));
+    this.colors.push(new MonopolyColor("Green"));
+    this.colors.push(new MonopolyColor("Blue"));
 
     this.board.push(new Location("Go!",0)); //0
-    this.board.push(new Property("Spive Lair",60,50,[2,10,30,90,160,250], colors[0],1)); //1
+    this.board.push(new Property("Spive Lair",60,50,[2,10,30,90,160,250], this.colors[0],1)); //1
     this.board.push(new CommunityChest(2));//2
-    this.board.push(new Property("Peer Tutoring Room",60,50,[4,20,60,180,320,450],colors[0],3));
+    this.board.push(new Property("Peer Tutoring Room",60,50,[4,20,60,180,320,450],this.colors[0],3));
     this.board.push(new Tax("Textbook Tax",100,4));//4
     this.board.push(new RailRoad("Bateman's Pond",5)); //5
-    this.board.push(new Property("Smokestack",100,50,[6,30,90,270,400,550],colors[1],6)); //6
+    this.board.push(new Property("Smokestack",100,50,[6,30,90,270,400,550],this.colors[1],6)); //6
     this.board.push(new Chance(7)); //7
-    this.board.push(new Property("Rockstar Rabb's Recording Room",100,50,[6,30,90,270,400,550],colors[1],8));
-    this.board.push(new Property("Recital Hall",120,50,[8,40,100,300,450,600],colors[1],9)); //9
+    this.board.push(new Property("Rockstar Rabb's Recording Room",100,50,[6,30,90,270,400,550],this.colors[1],8));
+    this.board.push(new Property("Recital Hall",120,50,[8,40,100,300,450,600],this.colors[1],9)); //9
     this.board.push(new Location("Writing Workshop",10));
-    this.board.push(new Property("Pillai's Programming Palace",140,100,[10,50,150,450,625,750],colors[2],11));
+    this.board.push(new Property("Pillai's Programming Palace",140,100,[10,50,150,450,625,750],this.colors[2],11));
     this.board.push(new Utility("D.J. Beare's Dominion",12,4));
-    this.board.push(new Property("The Rotunda",140,100,[10,50,150,450,625,750],colors[2],13));
-    this.board.push(new Property("The Observatory",160,100,[12,60,180,500,700,900],colors[2],14));
+    this.board.push(new Property("The Rotunda",140,100,[10,50,150,450,625,750],this.colors[2],13));
+    this.board.push(new Property("The Observatory",160,100,[12,60,180,500,700,900],this.colors[2],14));
     this.board.push(new RailRoad("Estabrook Woods",15)); //15
-    this.board.push(new Property("The Cage",180,100,[14,70,200,550,750,950],colors[3],16));
+    this.board.push(new Property("The Cage",180,100,[14,70,200,550,750,950],this.colors[3],16));
     this.board.push(new CommunityChest(17));
-    this.board.push(new Property("The Dance Studio",180,100,[14,70,200,550,750,950],colors[3],18));
-    this.board.push(new Property("Fitness Center",200,100,[16,80,220,600,800,1000],colors[3],19));
+    this.board.push(new Property("The Dance Studio",180,100,[14,70,200,550,750,950],this.colors[3],18));
+    this.board.push(new Property("Fitness Center",200,100,[16,80,220,600,800,1000],this.colors[3],19));
     this.board.push(new Location("Acorn Lot",20));
-    this.board.push(new Property("Tech Center",220,150,[18,90,250,700,875,1050],colors[4],21));
+    this.board.push(new Property("Tech Center",220,150,[18,90,250,700,875,1050],this.colors[4],21));
     this.board.push(new Chance(22));
-    this.board.push(new Property("Terry Room",220,150,[18,90,250,700,875,1050],colors[4],23));
-    this.board.push(new Property("Third Floor of Eliot",240,150,[20,100,300,750,925,1100],colors[4],24));
+    this.board.push(new Property("Terry Room",220,150,[18,90,250,700,875,1050],this.colors[4],23));
+    this.board.push(new Property("Third Floor of Eliot",240,150,[20,100,300,750,925,1100],this.colors[4],24));
     this.board.push(new RailRoad("Turf Fields",25)); //25
-    this.board.push(new Property("Health Center",260,150,[22,110,330,800,975,1150],colors[5],26));
-    this.board.push(new Property("Stufac",240,150,[22,110,330,800,975,1150],colors[5],27));
+    this.board.push(new Property("Health Center",260,150,[22,110,330,800,975,1150],this.colors[5],26));
+    this.board.push(new Property("Stufac",240,150,[22,110,330,800,975,1150],this.colors[5],27));
     this.board.push(new Utility("Deans' Office",28,4));
-    this.board.push(new Property("Dining Hall",240,150,[24,120,360,850,1025,1200],colors[5],29));
+    this.board.push(new Property("Dining Hall",240,150,[24,120,360,850,1025,1200],this.colors[5],29));
     this.board.push(new Location("Go To Writing Workshop",30));
-    this.board.push(new Property("Kaye Theater",280,200,[26,130,390,900,1100,1275],colors[6],31));
-    this.board.push(new Property("Ishibashi Gallery",280,200,[26,130,390,900,1100,1275],colors[6],32));
+    this.board.push(new Property("Kaye Theater",280,200,[26,130,390,900,1100,1275],this.colors[6],31));
+    this.board.push(new Property("Ishibashi Gallery",280,200,[26,130,390,900,1100,1275],this.colors[6],32));
     this.board.push(new Chance(33));
-    this.board.push(new Property("BAP Conference Room",300,200,[28,150,450,1000,1200,1400],colors[6],34));
+    this.board.push(new Property("BAP Conference Room",300,200,[28,150,450,1000,1200,1400],this.colors[6],34));
     this.board.push(new RailRoad("Soccer Fields",35)); //35
     this.board.push(new CommunityChest(36));
-    this.board.push(new Property("Chapel Bells",350,200,[35,175,500,1100,1300,1500],colors[7],37));
-    this.board.push(new Property("Chapel Podium",400,200,[40,200,600,1400,1700,2000],colors[7],39));
+    this.board.push(new Property("Chapel Bells",350,200,[35,175,500,1100,1300,1500],this.colors[7],37));
+    this.board.push(new Property("Chapel Podium",400,200,[40,200,600,1400,1700,2000],this.colors[7],39));
   }
 
   getBoard() {

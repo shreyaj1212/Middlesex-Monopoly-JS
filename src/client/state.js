@@ -1,4 +1,4 @@
-import { updateLeaderboard } from './leaderboard';
+import { updateLeaderboard } from 'leaderboard';
 
 // The "current" state will always be RENDER_DELAY ms behind server time.
 // This makes gameplay smoother and lag less noticeable.

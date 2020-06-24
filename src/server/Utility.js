@@ -3,13 +3,12 @@
  */
 // const Constants = require('../shared/constants');
 //
-const Constants = require('constants');
+const Constants = require('./constants');
 
-const Ownable = require('Ownable');
-const Player = require('player');
-const Constants = require('constants');
+const Ownable = require('./Ownable');
+const Player = require('./player');
 
-class Utility extends Ownable{
+class Utility {//extends Ownable{
   constructor(name,position,rent) {
     this.price = 150;
     this.name = name;

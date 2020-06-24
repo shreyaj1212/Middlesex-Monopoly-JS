@@ -10,6 +10,10 @@ class Location{
 		this.position = position;
 	}
 
+	toString() {
+		return this.name;
+	}
+
 	getPosition(){
 		return position;
 	}

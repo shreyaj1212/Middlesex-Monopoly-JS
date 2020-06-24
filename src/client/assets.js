@@ -1,6 +1,10 @@
 const ASSET_NAMES = [
-  'ship.svg',
-  'bullet.svg',
+  'bap.jpg',
+  'batemans.jpg',
+  'chapel.jpg',
+  'eliot.jpg',
+  'hat.svg',
+  'rcc.jpg',
 ];
 
 const assets = {};
@@ -19,6 +23,10 @@ function downloadAsset(assetName) {
   });
 }
 
-export const downloadAssets = () => downloadPromise;
+const downloadAssets = () => downloadPromise;
 
-export const getAsset = assetName => assets[assetName];
+module.exports = downloadAssets;
+
+const getAsset = assetName => assets[assetName];
+
+module.exports = getAsset;

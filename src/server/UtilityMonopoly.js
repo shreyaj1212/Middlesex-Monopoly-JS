@@ -1,9 +1,9 @@
 /**
  * @author Shreya Jain
  */
- const Constants = require('constants');
+ const Constants = require('./constants');
 
-const Utility = require('Utility');
+const Utility = require('./Utility');
 
 class UtilityMonopoly {//implements Monopoly{
  constructor(propertiesIncluded) {

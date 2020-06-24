@@ -3,10 +3,10 @@
  */
 // const Constants = require('../shared/constants');
 //
-const Constants = require('constants');
+const Constants = require('./constants');
 
-const Player = require('player');
-const Location = require('location');
+const Player = require('./player');
+const Location = require('./location');
 class RailRoad {//extends Ownable{
   //onstructor(nom,price,color,owner,rents,pos
   constructor(name,position) {
@@ -17,7 +17,7 @@ class RailRoad {//extends Ownable{
   }
 
   getRent(diceRoll){
-    return rent;
+    return this.rent;
   }
 
   setRent(x) {

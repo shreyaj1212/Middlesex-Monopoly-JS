@@ -3,11 +3,12 @@
  */
 // const Constants = require('../shared/constants');
 // const shortid = require('shortid');
+const Location = require('./location')
+
 const Constants = require('constants');
 
 // const Player = require('player');
 // const Monopoly = require('Monopoly');
-const Location = require('location');
 //
 class Ownable extends Location {
 	constructor(nom,price,color,owner,rents,pos) {
@@ -60,6 +61,10 @@ class Ownable extends Location {
 	 */
 	setOwner(newOwner) {
 		this.owner = newOwner;
+	}
+
+	toString() {
+		return this.name;
 	}
 }
 
