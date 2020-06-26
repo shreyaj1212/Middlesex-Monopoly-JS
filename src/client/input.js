@@ -16,7 +16,7 @@ export function stopCapturingInput() {
  * so the HTML id of the button clicked can be a parameter for this method?
  */
 function handleInput(htmlID) {
-  if(htmlID.equals("roll-dice-button")) {
+  if(htmlID.equals("play-button")) {
     takeTurn();
   }
   else if(htmlID.equals("buy")) {
