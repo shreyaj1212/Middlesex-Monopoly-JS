@@ -25,4 +25,15 @@ module.exports = Object.freeze({
     INPUT: 'input',
     GAME_OVER: 'dead',
   },
+  // FORTUNES: {
+  //   {"Oh no! Everyone in your dorm got sick, so now you are too! Lose $50", -50},
+  //   {"Oh no! It snowed but Mr. Beare didn't call a snow day! Lose $50",  -50},
+  //   {"Oh no! It snowed and Mr. Beare called a snow day! Gain $50",  50},
+  //   { "It's sunny and you play spikeball on the Circle! Gain $50", 50},
+  //   {"Ay Caramba! You missed assembly. Lose $50",-50},
+  //   {"Oh no! You accidentally slept in! Lose $50", -50},
+  //   {"You gave a great tour today! Gain $50", 50},
+  //   {"You went to Open Table and served your community! Gain $50", 50},
+  // },
+  NUM_FORTUNES: 8,
 });
