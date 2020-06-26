@@ -12,7 +12,7 @@ Got a lot of help regarding the structure of this program from https://victorzho
 
 Credits
 =======
-Front End Design: Shreya Jain and Andrew Harris
-Back End: Shreya Jain
-Sources:
+Front End Design: Shreya Jain and Andrew Harris<br/>
+Back End: Shreya Jain<br/>
+Sources:<br/>
 https://victorzhou.com/blog/build-an-io-game-part-1/
