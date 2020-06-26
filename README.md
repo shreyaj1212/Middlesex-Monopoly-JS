@@ -9,3 +9,10 @@ Tax, Chance, and CommunityChest extend Location<br>
 Ownable extends Location<br>
 RailRoad, Property, and Utility extend Ownable<br><br>
 Got a lot of help regarding the structure of this program from https://victorzhou.com/blog/build-an-io-game-part-1/
+
+Credits
+=======
+Front End Design: Shreya Jain and Andrew Harris
+Back End: Shreya Jain
+Sources:
+https://victorzhou.com/blog/build-an-io-game-part-1/

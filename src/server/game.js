@@ -95,7 +95,7 @@ class Game{
     delete this.players[socket.id];
   }
 
-  move(numSpaces){
+  move(player,numSpaces){
     player.addToPosition(diceRoll);
     if(player.getPosition()>=Constants.BOARD_LENGTH) {
 			player.updateWealth(Constants.PASS_GO_WEALTH);
@@ -108,7 +108,7 @@ class Game{
    *
    */
   askUserToBuy(socket, ownable) {
-    io.to(socket.id).emit('would you like to buy ', ownable.getName(),'?');
+    io.to(socket.id).emit(Constants.ASK_TO_BUY);
   }
 
   /*
@@ -180,7 +180,7 @@ class Game{
     var player = this.players[socket.id];
     if(player) {
       var diceRoll = rollDice();
-      move(diceRoll);
+      move(player,diceRoll);
       if(!curLoc.isOwnable()) { // if it's not an ownable
         if(curLoc.isChanceOrCommChest()) {
           curLoc.executeFortune(player);

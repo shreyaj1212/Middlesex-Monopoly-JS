@@ -2,7 +2,8 @@
  * @author Shreya Jain
  */
 
-const Color = require('color');
+const Color = require('./MonopolyColor');
+const Player = require('./player');
 
 class Fortune {
    constructor(string,wealthImpact) {
@@ -14,9 +15,9 @@ class Fortune {
      return this.string;
    }
 
-   // applyWealthImpact(person) {
-   //   person.updateWealth(wealthImpact);
-   // }
+   applyWealthImpact(player) {
+     player.updateWealth(wealthImpact);
+   }
 
    getWealthImpact() {
      return this.wealthImpact;

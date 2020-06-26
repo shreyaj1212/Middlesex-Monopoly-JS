@@ -1,22 +1,16 @@
-// // import {getName} from './Property.js';
-// console.log(require('color'));
-// console.log(require('color'));
-// console.log(require('fortune'));
+const Game = require('./game');
+const Player = require('./player');
 
-var Color = require('MonopolyColor');
-// var purple = new Color("Purple");
-// console.log(purple);
-// var purple = new Color("Purple");
-// console.log(purple);
-// const Property = require('Property');
-// const Chance = require('Chance');
-// const CommunityChest = require('CommunityChest');
-// const Fortune = require('Fortune');
-// const Game = require('Game');
+var game = new Game();
+var player1 = new Player("Spongebob");
+var player2 = new Player("Squidward");
+var player3 = new Player("Patrick");
+var player4 = new Player("Sandy");
 
-// const Constants = require('./shared/constants');
-//
-// const game = new Game();
-// console.log(game.getBoard());
-// var property = {name:"Spive Lair",poh:50,rents:[2,50,120,439,1029],color:purple};
-// console.log(property);
+game.addPlayer(player1);
+game.addPlayer(player2);
+game.addPlayer(player3);
+game.addPlayer(player4);
+
+console.log(game.getBoard());
+console.log(game.sockets);

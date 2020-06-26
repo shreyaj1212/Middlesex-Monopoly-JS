@@ -4,7 +4,8 @@
  const Constants = require('../shared/constants');
  const Fortune = require('./Fortune');
  const Location = require('./location');
- 
+ const Player = require('./player');
+
 class CommunityChest extends Location{
   constructor(position) {
     super("Community Chest", position);
