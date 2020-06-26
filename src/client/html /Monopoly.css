@@ -1530,7 +1530,7 @@
 	transform-origin: center;
 }
 .podium_accent_Class {
-	fill: rgba(255,127,0,1);
+	fill: rgba(0,69,255,1);
 	stroke: rgba(0,0,0,1);
 	stroke-width: 1px;
 	stroke-linejoin: miter;
@@ -1663,7 +1663,7 @@
 	transform-origin: center;
 }
 .bells_accent_Class {
-	fill: rgba(255,127,0,1);
+	fill: rgba(0,69,255,1);
 	stroke: rgba(0,0,0,1);
 	stroke-width: 1px;
 	stroke-linejoin: miter;
@@ -1935,7 +1935,7 @@
 	text-transform: uppercase;
 }
 .bap_room_accent_Class {
-	fill: rgba(215,71,221,1);
+	fill: rgba(24,141,20,1);
 	stroke: rgba(0,0,0,1);
 	stroke-width: 1px;
 	stroke-linejoin: miter;
@@ -2052,7 +2052,7 @@
 	transform-origin: center;
 }
 .gallery_accent_Class {
-	fill: rgba(215,71,221,1);
+	fill: rgba(24,141,20,1);
 	stroke: rgba(0,0,0,1);
 	stroke-width: 1px;
 	stroke-linejoin: miter;
@@ -2129,7 +2129,7 @@
 	transform-origin: center;
 }
 .theater_accent_Class {
-	fill: rgba(215,71,221,1);
+	fill: rgba(24,141,20,1);
 	stroke: rgba(0,0,0,1);
 	stroke-width: 1px;
 	stroke-linejoin: miter;
@@ -2259,7 +2259,7 @@
 	font-size: 14px;
 	color: rgba(0,0,0,1);
 }
-.textbook_tax_Class {
+.chest_left_Class {
 	position: absolute;
 	width: 147px;
 	height: 87px;
@@ -2267,7 +2267,7 @@
 	top: 613.506px;
 	overflow: visible;
 }
-.textbok_tax_left_box_Class {
+.chest_left_box_Class {
 	fill: rgba(252,252,252,1);
 	stroke: rgba(0,0,0,1);
 	stroke-width: 1px;
@@ -2276,7 +2276,7 @@
 	stroke-miterlimit: 4;
 	shape-rendering: auto;
 }
-.textbok_tax_left_box {
+.chest_left_box {
 	position: absolute;
 	overflow: visible;
 	width: 147px;
@@ -2284,14 +2284,48 @@
 	left: 0px;
 	top: 0px;
 }
-.textbok_tax_left_text_Class {
-	transform: translate(-115.747px, -759.453px) matrix(1,0,0,1,145.7468,778.6998) rotate(90deg);
+.chest_left_icon_Class {
+	position: absolute;
+	width: 74.36px;
+	height: 75.186px;
+	left: 42.501px;
+	top: 5.774px;
+	overflow: visible;
+}
+.Path_49_e_Class {
+	fill: rgba(80,113,250,1);
+}
+.Path_49_e {
+	overflow: visible;
+	position: absolute;
+	width: 71.142px;
+	height: 70.36px;
+	transform: translate(-158.248px, -765.227px) matrix(1,0,0,1,159.857,767.65) rotate(90deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+.Path_50_e_Class {
+	fill: transparent;
+}
+.Path_50_e {
+	overflow: visible;
+	position: absolute;
+	width: 75.186px;
+	height: 74.36px;
+	transform: translate(-158.248px, -765.227px) matrix(1,0,0,1,157.8347,765.6399) rotate(-90deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+.chest_left_cost_Class {
+	transform: translate(-115.747px, -759.453px) matrix(1,0,0,1,121.7468,794.6998) rotate(90deg);
 	transform-origin: center;
 	left: 0px;
 	top: 0px;
 	position: absolute;
 	overflow: visible;
-	width: 77px;
+	width: 29px;
 	white-space: nowrap;
 	text-align: center;
 	font-family: Didot;
@@ -2376,7 +2410,7 @@
 	font-size: 14px;
 	color: rgba(0,0,0,1);
 }
-.textbook_tax_e_Class {
+.textbook_tax_Class {
 	position: absolute;
 	width: 147px;
 	height: 87px;
@@ -2467,10 +2501,10 @@
 	top: 12.765px;
 	overflow: visible;
 }
-.Path_4_fd_Class {
+.Path_4_fg_Class {
 	fill: rgba(121,154,10,1);
 }
-.Path_4_fd {
+.Path_4_fg {
 	overflow: visible;
 	position: absolute;
 	width: 49.575px;
@@ -2480,10 +2514,10 @@
 	left: 0px;
 	top: 0px;
 }
-.Rectangle_29_fe_Class {
+.Rectangle_29_fh_Class {
 	fill: transparent;
 }
-.Rectangle_29_fe {
+.Rectangle_29_fh {
 	width: 67px;
 	height: 74px;
 	position: absolute;
@@ -2634,10 +2668,10 @@
 	top: 0px;
 	overflow: visible;
 }
-.Path_5_fp_Class {
+.Path_5_fs_Class {
 	fill: transparent;
 }
-.Path_5_fp {
+.Path_5_fs {
 	overflow: visible;
 	position: absolute;
 	width: 74.363px;
@@ -2646,10 +2680,10 @@
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
-.Path_6_fq_Class {
+.Path_6_ft_Class {
 	fill: rgba(255,134,31,1);
 }
-.Path_6_fq {
+.Path_6_ft {
 	overflow: visible;
 	position: absolute;
 	width: 61.969px;
@@ -2935,10 +2969,10 @@
 	top: 37px;
 	overflow: visible;
 }
-.Path_49_gb_Class {
+.Path_49_ge_Class {
 	fill: rgba(80,113,250,1);
 }
-.Path_49_gb {
+.Path_49_ge {
 	overflow: visible;
 	position: absolute;
 	width: 70.36px;
@@ -2947,10 +2981,10 @@
 	top: 2px;
 	transform: matrix(1,0,0,1,0,0);
 }
-.Path_50_gc_Class {
+.Path_50_gf_Class {
 	fill: transparent;
 }
-.Path_50_gc {
+.Path_50_gf {
 	overflow: visible;
 	position: absolute;
 	width: 74.36px;
@@ -3041,7 +3075,7 @@
 	top: 0px;
 	overflow: visible;
 }
-.cage_box_gj_Class {
+.cage_box_gm_Class {
 	fill: rgba(252,252,252,1);
 	stroke: rgba(0,0,0,1);
 	stroke-width: 1px;
@@ -3050,7 +3084,7 @@
 	stroke-miterlimit: 4;
 	shape-rendering: auto;
 }
-.cage_box_gj {
+.cage_box_gm {
 	width: 147px;
 	height: 87px;
 	position: absolute;
@@ -3058,7 +3092,7 @@
 	transform: translate(1.145px, 0.3px) matrix(1,0,0,1,-31.1448,29.7) rotate(90deg);
 	transform-origin: center;
 }
-.cage_accent_gk_Class {
+.cage_accent_gn_Class {
 	fill: rgba(255,127,0,1);
 	stroke: rgba(0,0,0,1);
 	stroke-width: 1px;
@@ -3067,7 +3101,7 @@
 	stroke-miterlimit: 4;
 	shape-rendering: auto;
 }
-.cage_accent_gk {
+.cage_accent_gn {
 	width: 40px;
 	height: 87px;
 	position: absolute;
@@ -3139,7 +3173,7 @@
 	top: 30px;
 	overflow: visible;
 }
-.Group_1_gq_Class {
+.Group_1_gt_Class {
 	position: absolute;
 	width: 69px;
 	height: 74px;
@@ -3147,10 +3181,10 @@
 	top: 0px;
 	overflow: visible;
 }
-.Rectangle_29_gr_Class {
+.Rectangle_29_gu_Class {
 	fill: transparent;
 }
-.Rectangle_29_gr {
+.Rectangle_29_gu {
 	position: absolute;
 	overflow: visible;
 	width: 69px;
@@ -3158,7 +3192,7 @@
 	left: 0px;
 	top: 0px;
 }
-.Group_3_gs_Class {
+.Group_3_gv_Class {
 	position: absolute;
 	width: 51.408px;
 	height: 49.558px;
@@ -3166,7 +3200,7 @@
 	top: 12.394px;
 	overflow: visible;
 }
-.Group_2_gt_Class {
+.Group_2_gw_Class {
 	position: absolute;
 	width: 51.408px;
 	height: 49.558px;
@@ -3174,10 +3208,10 @@
 	top: 0px;
 	overflow: visible;
 }
-.Path_4_gu_Class {
+.Path_4_gx_Class {
 	fill: rgba(121,154,10,1);
 }
-.Path_4_gu {
+.Path_4_gx {
 	overflow: visible;
 	position: absolute;
 	width: 51.408px;
