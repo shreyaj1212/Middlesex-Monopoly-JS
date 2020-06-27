@@ -27,12 +27,14 @@ console.log(`Server listening on port ${port}`);
 
 // Setup socket.io
 const io = socketio(server);
+const wannaBuy = document.getElementById('wanna-buy');
 
 // Listen for socket.io connections
 io.on('connection', socket => {
   console.log('Player connected!', socket.id);
   socket.on(Constants.MSG_TYPES.JOIN_GAME, joinGame);
   socket.on(Constants.MSG_TYPES.ROLL_DICE_INPUT, handleRollInput);
+  socket.on(Constants.MSG_TYPES.START_GAME, playTheGame);
   socket.on(Constants.MSG_TYPES.BUY_PROPERTY_INPUT, handleBuyPropertyInput);
   socket.on('disconnect', onDisconnect);
 });
@@ -44,8 +46,11 @@ function joinGame(username) {
   game.addPlayer(this, username);
 }
 
-function askUserToBuy(socket) {
-  io.to(socket.id).emit(Constants.ASK_TO_BUY);
+// function askUserToBuy(socket) {
+// }
+
+function playTheGame() {
+  game.startGame();
 }
 
 function handleRollInput() {

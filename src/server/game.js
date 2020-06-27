@@ -75,6 +75,76 @@ class Game{
     this.board.push(new Property("Chapel Podium",400,200,[40,200,600,1400,1700,2000],this.colors[7],39));
   }
 
+  setPlayerToPlaying(player) {
+    player.setToPlay();
+    if(allPlayersArePlaying()){
+      startGame();
+    }
+  }
+
+  allPlayersArePlaying(){
+    for(var i=0;i<this.players.length;i++) {
+      if(!this.players[i].isThisPlayerPlaying()) return false;
+    }
+    return true;
+  }
+
+  startGame() {
+    this.players[0].setImage('../../public/assets/hat.jpg');
+    this.players[1].setImage('../../public/assets/dog.png');
+    playTheGame();
+  }
+
+  playTheGame() {
+    var count = 0;
+    while(allPlayersAlive()) {
+      if(count>0) {
+        count = count%this.players.length;
+      }
+      var player = this.players[count];
+      var numspaces = rollDice();
+      move(player, numspaces);
+      if(!curLoc.isOwnable()) { // if it's not an ownable
+        if(curLoc.isChanceOrCommChest()) {
+          curLoc.executeFortune(player);
+        }
+        else if(curLoc.isTax()) { // Tax
+          curLoc.applyTax(player);
+        }
+        else if(curLoc.isGoToWW()){ // Go To Writing Workshop Place
+          player.sendToJail();
+        }
+        return true;
+      }
+      else{ // if curLoc is ownable
+        if(curLoc.isOwned()) { // if it's owned, pay rent
+          player.updateWealth(-1*curLoc.getRent(diceRoll));
+          return true;
+        }
+        else{ // otherwise, ask user if they would like to buy the property
+          var userWantsToBuy = askUserToBuy(player,curLoc);
+          return false;
+        }
+      }
+      count++;
+    }
+    console.log("Game over");
+  }
+
+  allPlayersAlive() {
+    var result = true;
+    for(var i =0;i<this.players.length;i++) {
+      if(this.players[i].getWealth()<0){
+        return false;
+      }
+    }
+    return result;
+  }
+
+  wealthGreaterThanZero(player) {
+    return player.getWealth()>0;
+  }
+
   getBoard() {
     return this.board;
   }
@@ -85,6 +155,7 @@ class Game{
   addPlayer(socket, username) {
     this.sockets[socket.id] = socket;
     this.players[socket.id] = new Player(socket.id, username);
+    console.log("added " + socket.id + " as " + username);
   }
 
   /*

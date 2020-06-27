@@ -12,6 +12,11 @@
 :root {
 	--web-view-ids: ID2_The_Game;
 }
+
+#leaderboard-list {
+		color: white;
+}
+
 * {
 	margin: 0;
 	padding: 0;

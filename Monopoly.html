@@ -3602,9 +3602,11 @@ if property is mortgaged
 	<!-- PLAY MENU  -->
 	<div style="position:absolute;width:360px;height:456px;left:1531px;top:35px;overflow:visible;" data-type="Group" data-name="play-menu" class="play-menu_Class">
     <div id="play-menu" class="hidden">
-    <input type="text" id="username-input" placeholder="Username" />
-    <button id="play-button">PLAY</button>
-    <div id="leaderboard" class="hidden">
+      <input type="text" id="username-input" placeholder="Username" />
+      <button id="play-button">PLAY</button>
+      <button id="start-game-button">Start The Game</button>
+      <div id="wanna-play"></div>
+      <div id="leaderboard" class="hidden">
 		<!-- <div style="position:absolute;width:360px;height:87px;left:0px;top:0px;overflow:visible;" data-type="Group" data-name="player_one" class="player_one_Class" id="leaderboard"> -->
 			<!-- <svg data-type="Rectangle" data-name="player_one_box" class="player_one_box">
 				<rect class="player_one_box_Class" rx="0" ry="0" x="0" y="0" width="360" height="87">
@@ -3669,8 +3671,8 @@ if property is mortgaged
 				<span>$12000</span> -->
         <table>
       <tr>
-        <th>Username</th>
-        <th>Score</th>
+        <th id ="leaderboard-list">Username</th>
+        <th id = "leaderboard-list">Score</th>
       </tr>
       <tr><td></td><td></td></tr>
       <tr><td></td><td></td></tr>

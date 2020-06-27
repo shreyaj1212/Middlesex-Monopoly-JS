@@ -16,6 +16,20 @@ class Player{
 		this.inww = false;
 		this.ownables = {};
 		this.pos = 0;
+		this.image = null;
+		this.playing = false;
+	}
+
+	isThisPlayerPlaying() {
+		return this.playing;
+	}
+
+	setImage(image) {
+		this.image = image;
+	}
+
+	setToPlay() {
+		this.playing = true;
 	}
 
 	/*

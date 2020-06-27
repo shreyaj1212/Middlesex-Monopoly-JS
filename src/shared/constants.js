@@ -24,6 +24,7 @@ module.exports = Object.freeze({
     GAME_UPDATE: 'update',
     INPUT: 'input',
     GAME_OVER: 'dead',
+    START_GAME: 'start',
   },
   // FORTUNES: {
   //   {"Oh no! Everyone in your dorm got sick, so now you are too! Lose $50", -50},
