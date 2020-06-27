@@ -1,7 +1,7 @@
 {
   "name": "mx-monopoly",
   "version": "1.0.0",
-  "description": "Documentation Notes ======= Monopoly.js is an interface <br> RailRoadMonopoly.js, Color.js, and UtilityMonopoly.js implement the Monopoly Interface<br>",
+  "description": "A game of Middlesex-themed Monopoly",
   "main": "src/server/server.js",
   "scripts": {
     "build": "webpack --config webpack.prod.js",

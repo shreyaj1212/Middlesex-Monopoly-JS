@@ -1,6 +1,6 @@
 // Modified by Shreya Jain
 import { debounce } from 'throttle-debounce';
-import { getAsset } from './assets';
+// import { getAsset } from './assets';
 import { getCurrentState } from './state';
 
 const Constants = require('../shared/constants');
@@ -67,7 +67,7 @@ function renderPlayer(me, player) {
   const canvasY = canvas.height / 2 + y - me.y;
 
   if(positionOnBoard<=0 && positionOnBoard<10) {
-    
+
   }
   // Draw player
   context.save();

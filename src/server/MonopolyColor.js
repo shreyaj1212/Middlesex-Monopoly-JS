@@ -84,7 +84,7 @@
  	}
 }
 
-var purple = new MonopolyColor("purple");
-console.log(purple);
+// var purple = new MonopolyColor("purple");
+// console.log(purple);
 module.exports = MonopolyColor;
-console.log(module.exports);
+// console.log(module.exports);

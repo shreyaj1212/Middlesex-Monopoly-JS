@@ -41,7 +41,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'src/client/html/index.html',
+      title: 'Middlesex Monopoly',
+      template: 'Monopoly.html',
     }),
   ],
 };
