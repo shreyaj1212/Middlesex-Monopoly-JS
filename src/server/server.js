@@ -27,7 +27,7 @@ console.log(`Server listening on port ${port}`);
 
 // Setup socket.io
 const io = socketio(server);
-const wannaBuy = document.getElementById('wanna-buy');
+// const wannaBuy = document.getElementById('wanna-buy');
 
 // Listen for socket.io connections
 io.on('connection', socket => {
@@ -41,6 +41,7 @@ io.on('connection', socket => {
 
 // Setup the Game
 const game = new Game();
+console.log("game created");
 
 function joinGame(username) {
   game.addPlayer(this, username);

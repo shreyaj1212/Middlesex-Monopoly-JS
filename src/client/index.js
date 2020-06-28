@@ -33,9 +33,10 @@ const usernameInput = document.getElementById('username-input');
 const startGameButton = document.getElementById('start-game-button');
 
 Promise.all([
-  connect(onGameOver),
-  downloadAssets(),
+  connect(),
+  // downloadAssets(),
 ]).then(() => {
+  console.log("promises done");
   playMenu.classList.remove('hidden');
   usernameInput.focus();
   playButton.onclick = () => {

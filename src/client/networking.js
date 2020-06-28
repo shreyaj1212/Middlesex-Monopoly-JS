@@ -11,7 +11,7 @@ const connectedPromise = new Promise(resolve => {
     resolve();
   });
 });
-const wannaBuy = document.getElementById('wanna-buy');
+// const wannaBuy = document.getElementById('wanna-buy');
 
 export const askUserToBuy = username => {
   wannaBuy.innerHTML = '<p>Would you like to buy this property?</p><button id=\"yes\">YES</button><button id=\"no\">NO</button>';
@@ -19,7 +19,7 @@ export const askUserToBuy = username => {
 
 export const play = username => {
   socket.emit(Constants.MSG_TYPES.JOIN_GAME, username);
-  socket.emit(Constants.MSG_TYPES.START_GAME);
+  console.log(username+" has clicked play!");
 };
 
 export const roll_dice = username => {
@@ -36,15 +36,16 @@ export const sendBuddyMessage = () => (
   })
 );
 
-export const printAskToBuy = () => (
-  console.log("Do you want to buy this property?");
-  socket.emit(<p> "Do you want to buy this property?"</p>);
-);
+// export const printAskToBuy = () => (
+//   console.log("Do you want to buy this property?"),
+//   socket.emit('<p>Do you want to buy this property?</p>'),
+// );
 
 export const connect = onGameOver => (
+  console.log("got to the connect method in networking.js"),
   connectedPromise.then(() => {
     // Register callbacks
-    socket.on(Constants.MSG_TYPES.GAME_UPDATE, processGameUpdate);
+    // socket.on(Constants.MSG_TYPES.GAME_UPDATE, processGameUpdate);
     socket.on(Constants.MSG_TYPES.GAME_OVER, onGameOver);
     socket.on(Constants.MSG_TYPES.ASK_TO_BUY,askUserToBuy);
     socket.on('disconnect', () => {
