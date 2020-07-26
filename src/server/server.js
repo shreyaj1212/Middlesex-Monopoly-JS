@@ -43,8 +43,8 @@ io.on('connection', socket => {
 const game = new Game();
 console.log("game created");
 
-function joinGame(username) {
-  game.addPlayer(this, username);
+function joinGame(username, color) {
+  game.addPlayer(this, username, color);
 }
 
 // function askUserToBuy(socket) {

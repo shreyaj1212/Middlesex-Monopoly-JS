@@ -10,7 +10,7 @@ const Constants = require('constants');
 // const Color = rquire('color');
 
 class Player{
-	constructor(name) {
+	constructor(name, color) {
 		this.name = name;
 		this.wealth = 1500;
 		this.inww = false;
@@ -18,6 +18,7 @@ class Player{
 		this.pos = 0;
 		this.image = null;
 		this.playing = false;
+		this.color = color;
 	}
 
 	isThisPlayerPlaying() {

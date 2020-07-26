@@ -152,10 +152,10 @@ class Game{
   /*
    * adds a player from the game
    */
-  addPlayer(socket, username) {
+  addPlayer(socket, username, color) {
     this.sockets[socket.id] = socket;
-    this.players[socket.id] = new Player(socket.id, username);
-    console.log("added " + socket.id + " as " + username);
+    this.players[socket.id] = new Player(socket.id, username, color);
+    console.log("added " + socket.id + " as " + username + " with color " + color);
   }
 
   /*
