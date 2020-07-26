@@ -689,12 +689,12 @@ var Application = function() {
 			if (view==null) view =self.getVisibleView();
 			if (view && setViewOptions) self.setViewOptions(view);
 		}
-		else if (id) {
-			display = window.getComputedStyle(view).getPropertyValue("display");
-			if (display=="" || display=="none") {
-				view.style.display = "block";
-			}
-		}
+		// else if (id) {
+		// 	display = window.getComputedStyle(view).getPropertyValue("display");
+		// 	if (display=="" || display=="none") {
+		// 		view.style.display = "block";
+		// 	}
+		// }
 
 		if (view) {
 			if (self.currentView!=null) {
