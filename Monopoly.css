@@ -17,6 +17,10 @@
 		color: white;
 }
 
+.hidden {
+	display: hide;
+}
+
 * {
 	margin: 0;
 	padding: 0;
