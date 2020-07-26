@@ -30,6 +30,7 @@ import './css/Monopoly.css';
 const playMenu = document.getElementById('play-menu');
 const playButton = document.getElementById('play-button');
 const usernameInput = document.getElementById('username-input');
+const colorInput = document.getElementById('color-input');
 const startGameButton = document.getElementById('start-game-button');
 
 Promise.all([
@@ -39,9 +40,10 @@ Promise.all([
   console.log("************promises done");
   playMenu.classList.remove('hidden');
   usernameInput.focus();
+  colorInput.focus();
   playButton.onclick = () => {
     // Play!
-    play(usernameInput.value);
+    play(usernameInput.value,colorInput.value);
     playMenu.classList.add('hidden');
     // initState();
     // startCapturingInput();
