@@ -36,25 +36,25 @@ Promise.all([
   connect(),
   // downloadAssets(),
 ]).then(() => {
-  console.log("promises done");
+  console.log("************promises done");
   playMenu.classList.remove('hidden');
   usernameInput.focus();
   playButton.onclick = () => {
     // Play!
     play(usernameInput.value);
     playMenu.classList.add('hidden');
-    initState();
-    startCapturingInput();
-    startRendering();
-    setLeaderboardHidden(false);
+    // initState();
+    // startCapturingInput();
+    // startRendering();
+    // setLeaderboardHidden(false);
   };
 }).catch(console.error);
 
 function onGameOver() {
-  stopCapturingInput();
-  stopRendering();
+  // stopCapturingInput();
+  // stopRendering();
   playMenu.classList.remove('hidden');
-  setLeaderboardHidden(true);
+  // setLeaderboardHidden(true);
 }
 
 
@@ -62,7 +62,7 @@ function onGameOver() {
 // const playMenu = document.getElementById('play-menu');
 // const playButton = document.getElementById('play-button');
 // const usernameInput = document.getElementById('username-input');
-//
+
 // Promise.all([
 //   connect(onGameOver),
 //   // downloadAssets(),
@@ -79,7 +79,7 @@ function onGameOver() {
 //     // setLeaderboardHidden(false);
 //   };
 // }).catch(console.error);
-//
+
 // function onGameOver() {
 //   playMenu.classList.remove('hidden');
 //   setLeaderboardHidden(true);
