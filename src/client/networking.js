@@ -20,6 +20,8 @@ export const askUserToBuy = username => {
 export const play = (username, color) => {
   socket.emit(Constants.MSG_TYPES.JOIN_GAME, username, color);
   console.log(username+" with color " + color + " has clicked play!");
+  const go = document.getElementById('box-0');
+  go.innerHTML = '<div class=\"circle-sj\" style=\"color: ' + color +'></div>';
 };
 
 export const roll_dice = username => {

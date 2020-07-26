@@ -17,6 +17,12 @@
 	display: none;
 }
 
+.circle-sj {
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+}
+
 * {
 	margin: 0;
 	padding: 0;
