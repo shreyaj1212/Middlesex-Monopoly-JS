@@ -17,11 +17,11 @@ export const askUserToBuy = username => {
   wannaBuy.innerHTML = '<p>Would you like to buy this property?</p><button id=\"yes\">YES</button><button id=\"no\">NO</button>';
 };
 
-export const play = (username, color) => {
-  socket.emit(Constants.MSG_TYPES.JOIN_GAME, username, color);
-  console.log(username+" with color " + color + " has clicked play!");
+export const play = (username, user_color) => {
+  socket.emit(Constants.MSG_TYPES.JOIN_GAME, username, user_color);
+  console.log(username+" with color " + user_color + " has clicked play!");
   const go = document.getElementById('box-0');
-  go.innerHTML = '<div class=\"circle-sj\" style=\"color: ' + color +'></div>';
+  go.insertAdjacentHTML('beforeend','<p class=\"circle-sj\" style=\"background-color: #' + user_color +';\">'+ username +'</p>');
 };
 
 export const roll_dice = username => {

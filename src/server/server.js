@@ -28,6 +28,7 @@ console.log(`Server listening on port ${port}`);
 // Setup socket.io
 const io = socketio(server);
 // const wannaBuy = document.getElementById('wanna-buy');
+// const go = document.getElementById('box-0');
 
 // Listen for socket.io connections
 io.on('connection', socket => {

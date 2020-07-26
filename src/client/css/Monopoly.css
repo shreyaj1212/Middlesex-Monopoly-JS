@@ -18,9 +18,10 @@
 }
 
 .circle-sj {
-	width: 20px;
-	height: 20px;
+	width: 20px !important;
+	height: 20px !important;
 	border-radius: 100%;
+	position: absolute;
 }
 
 * {
