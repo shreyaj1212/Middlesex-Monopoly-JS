@@ -1,11 +1,26 @@
 // Modified by Shreya Jain
-import { debounce } from 'throttle-debounce';
+// import { debounce } from 'throttle-debounce';
 // import { getAsset } from './assets';
 import { getCurrentState } from './state';
 
 const Constants = require('../shared/constants');
 
-const { PLAYER_RADIUS, PLAYER_MAX_HP, BULLET_RADIUS, MAP_SIZE } = Constants;
+function updateHTML() {
+    const { me, others } = getCurrentState();
+    if(!me) {
+        return;
+    }
+
+    const user_color = me.color;
+    const username = me.username;
+    const myPos = me.position;
+    const myPosID = "box-" + myPos;
+
+    const myPosBox = document.getElementById(myPosID);
+
+    myPosBox.insertAdjacentHTML('beforeend','<p class=\"circle-sj\" style=\"background-color: #' + user_color +';\">'+ username +'</p>');
+}
+// const { PLAYER_RADIUS, PLAYER_MAX_HP, BULLET_RADIUS, MAP_SIZE } = Constants;
 
 // Get the canvas graphics context
 // document is the HTML document

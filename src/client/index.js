@@ -1,7 +1,7 @@
 // Learn more about this file at:
 // https://victorzhou.com/blog/build-an-io-game-part-1/#3-client-entrypoints
-import { connect, play, roll_dice } from './networking';
-// import { startRendering, stopRendering } from './render';
+import { connect, play, roll_dice, playTheGame } from './networking';
+import { startRendering, stopRendering } from './render';
 // import { startCapturingInput, stopCapturingInput } from './input';
 // import { downloadAssets } from './assets';
 // import { initState } from './state';
@@ -16,7 +16,7 @@ import { connect, play, roll_dice } from './networking';
 // ***************************************************************************************
 
 // import { connect, play } from './networking';
-// import { startRendering, stopRendering } from './render';
+import { updateHTML } from './render';
 // import { startCapturingInput, stopCapturingInput } from './input';
 // import { downloadAssets } from './assets';
 // import { initState } from './state';
@@ -32,6 +32,7 @@ const playButton = document.getElementById('play-button');
 const usernameInput = document.getElementById('username-input');
 const colorInput = document.getElementById('color-input');
 const startGameButton = document.getElementById('start-game-button');
+const startButtonDiv = document.getElementById('start-button-div');
 
 Promise.all([
   connect(),
@@ -45,11 +46,17 @@ Promise.all([
     // Play!
     play(usernameInput.value,colorInput.value);
     playMenu.classList.add('hidden');
+    updateHTML();
     // initState();
     // startCapturingInput();
     // startRendering();
     // setLeaderboardHidden(false);
   };
+  startGameButton.onclick = () => {
+    startButtonDiv.classList.add('hidden');
+    playTheGame();
+    console.log("Game Started");
+  }
 }).catch(console.error);
 
 function onGameOver() {

@@ -1,6 +1,6 @@
 import io from 'socket.io-client';
 import { throttle } from 'throttle-debounce';
-// import { processGameUpdate } from 'state';
+import { processGameUpdate } from './state';
 
 const Constants = require('../shared/constants');
 const socketProtocol = (window.location.protocol.includes('https')) ? 'wss' : 'ws';
@@ -16,6 +16,10 @@ const connectedPromise = new Promise(resolve => {
 export const askUserToBuy = username => {
   wannaBuy.innerHTML = '<p>Would you like to buy this property?</p><button id=\"yes\">YES</button><button id=\"no\">NO</button>';
 };
+
+export const playTheGame = () => {
+  socket.emit(Constants.MSG_TYPES.START_GAME);
+}
 
 export const play = (username, user_color) => {
   socket.emit(Constants.MSG_TYPES.JOIN_GAME, username, user_color);
@@ -48,8 +52,9 @@ export const connect = onGameOver => (
   connectedPromise.then(() => {
     // Register callbacks
     // socket.on(Constants.MSG_TYPES.GAME_UPDATE, processGameUpdate);
+    socket.on(Constants.MSG_TYPES.GAME_UPDATE, processGameUpdate);
     socket.on(Constants.MSG_TYPES.GAME_OVER, onGameOver);
-    socket.on(Constants.MSG_TYPES.ASK_TO_BUY,askUserToBuy);
+    // socket.on(Constants.MSG_TYPES.ASK_TO_BUY,askUserToBuy);
     socket.on('disconnect', () => {
       console.log('Disconnected from server.');
       document.getElementById('disconnect-modal').classList.remove('hidden');

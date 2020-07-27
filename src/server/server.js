@@ -34,9 +34,9 @@ const io = socketio(server);
 io.on('connection', socket => {
   console.log('Player connected!', socket.id);
   socket.on(Constants.MSG_TYPES.JOIN_GAME, joinGame);
-  socket.on(Constants.MSG_TYPES.ROLL_DICE_INPUT, handleRollInput);
+  // socket.on(Constants.MSG_TYPES.ROLL_DICE_INPUT, handleRollInput);
   socket.on(Constants.MSG_TYPES.START_GAME, playTheGame);
-  socket.on(Constants.MSG_TYPES.BUY_PROPERTY_INPUT, handleBuyPropertyInput);
+  // socket.on(Constants.MSG_TYPES.BUY_PROPERTY_INPUT, handleBuyPropertyInput);
   socket.on('disconnect', onDisconnect);
 });
 
@@ -52,7 +52,7 @@ function joinGame(username, color) {
 // }
 
 function playTheGame() {
-  game.startGame();
+  game.playTheGame();
 }
 
 function handleRollInput() {

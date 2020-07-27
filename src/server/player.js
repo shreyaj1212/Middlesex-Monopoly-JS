@@ -59,7 +59,7 @@ class Player{
 	}
 
 	modPositionByBoardLength() {
-		pos = pos%40;
+		this.pos = this.pos%40;
 	}
 
 	/*
@@ -68,6 +68,11 @@ class Player{
 	 */
 	addToPosition(x) {
 		this.pos=this.pos+x;
+	}
+
+	move(x) {
+		this.addToPosition(x);
+		this.modPositionByBoardLength();
 	}
 
 	/*

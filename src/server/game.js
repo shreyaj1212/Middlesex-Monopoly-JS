@@ -19,7 +19,7 @@ class Game{
     this.sockets = {};
     this.players = {};
     this.lastUpdateTime = Date.now();
-    this.shouldSendUpdate = false;
+    this.shouldSendUpdate = true;
     setInterval(this.update.bind(this), 1000 / 60);
     // CREATING THE BOARD
     this.colors = [];
@@ -89,10 +89,37 @@ class Game{
     return true;
   }
 
-  startGame() {
-    this.players[0].setImage('../../public/assets/hat.jpg');
-    this.players[1].setImage('../../public/assets/dog.png');
-    playTheGame();
+  update() {
+    // const leaderboard = this.getLeaderboard();
+    Object.keys(this.sockets).forEach(playerID => {
+      const socket = this.sockets[playerID];
+      const player = this.players[playerID];
+      socket.emit(Constants.MSG_TYPES.GAME_UPDATE, this.createUpdate(player));
+    });
+    this.shouldSendUpdate = true;
+  }
+
+  createUpdate(player) {
+    player.move(this.rollDice());
+    const curProp = this.board[player.getPosition()];
+    if(curProp.isOwnable()) {
+      if(curProp.getOwner()==null) console.log("need to send player request to buy");
+      else {
+        console.log("need to get player to pay rent");
+      }
+    }
+    console.log("createUpdate() has been called.")
+    console.log("position of " + player.name + ": " + player.getPosition());
+    const others_arr = [];
+    for (var i=0;i<this.players.length;i++) {
+      if(this.players[i].name != player.name) {
+        others.push(this.players[i]);
+      }
+    }
+    return {
+      me: player,
+      others: others_arr,
+    }
   }
 
   playTheGame() {
@@ -228,18 +255,18 @@ class Game{
    * I will leave the definitions in right now
    * just so that I can come back to it later
    */
-  update() {
+  // update() {
 
-  }
+  // }
 
   /*
    * I don't think we'll need these methods but
    * I will leave the definitions in right now
    * just so that I can come back to it later
    */
-  createUpdate() {
+  // createUpdate() {
 
-  }
+  // }
 
   /*
    * this handleInput will roll the dice
