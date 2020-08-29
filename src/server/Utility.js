@@ -28,6 +28,10 @@ class Utility {//extends Ownable{
   setRent(x) {
     this.rent = x;
   }
+
+  isOwnable() {
+    return true;
+  }
 }
 
 module.exports=Utility;

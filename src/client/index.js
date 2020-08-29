@@ -54,7 +54,7 @@ Promise.all([
   };
   startGameButton.onclick = () => {
     startButtonDiv.classList.add('hidden');
-    playTheGame();
+    // playTheGame();
     console.log("Game Started");
   }
 }).catch(console.error);

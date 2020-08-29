@@ -38,11 +38,16 @@ io.on('connection', socket => {
   socket.on(Constants.MSG_TYPES.START_GAME, playTheGame);
   // socket.on(Constants.MSG_TYPES.BUY_PROPERTY_INPUT, handleBuyPropertyInput);
   socket.on('disconnect', onDisconnect);
+  socket.on(Constants.MSG_TYPES.ASK_TO_BUY, sendBuyMessage);
 });
 
 // Setup the Game
 const game = new Game();
 console.log("game created");
+
+export function sendBuyMessage() {
+  return;
+}
 
 function joinGame(username, color) {
   game.addPlayer(this, username, color);

@@ -73,6 +73,10 @@ class Property extends Ownable{
 	toString() {
 		return this.name;
 	}
+
+	isOwnable() {
+		return true;
+	}
 }
 
 module.exports = Property;

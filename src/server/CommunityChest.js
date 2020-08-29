@@ -17,6 +17,10 @@ class CommunityChest extends Location{
      // return Constants.FORTUNES[tempFortuneNum];
    }
 
+   isOwnable() {
+     return false;
+   }
+
    /*
     * applies the fortune to the player
     */

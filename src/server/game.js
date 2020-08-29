@@ -14,6 +14,13 @@ const UtilityMonopoly = require('./UtilityMonopoly');
 const RailRoadMonopoly = require('./RailRoadMonopoly');
 const Tax = require('./Tax');
 
+const express = require('express');
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const socketio = require('socket.io');
+
+const webpackConfig = require('../../webpack.dev.js');
+
 class Game{
   constructor() {
     this.sockets = {};
@@ -101,9 +108,12 @@ class Game{
 
   createUpdate(player) {
     player.move(this.rollDice());
-    const curProp = this.board[player.getPosition()];
-    if(curProp.isOwnable()) {
-      if(curProp.getOwner()==null) console.log("need to send player request to buy");
+    var curProp = this.board[player.getPosition()];
+    if(typeof(curProp)!='undefined' && curProp.isOwnable()) {
+      console.log(curProp);
+      if(curProp.getOwner()==null) {
+        socket.emit(Constants.MSG_TYPES.ASK_TO_BUY, curProp.toString());
+      }
       else {
         console.log("need to get player to pay rent");
       }
@@ -323,7 +333,7 @@ class Game{
    * for the player to move
    */
   rollDice() {
-    return Math.random()*Constants.MAX_DICE_ROLL+1;
+    return Math.floor(Math.random()*Constants.MAX_DICE_ROLL+1);
   }
 }
 

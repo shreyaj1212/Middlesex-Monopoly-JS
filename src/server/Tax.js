@@ -17,6 +17,10 @@ class Tax extends Location{
   applyTax(player) {
     player.updateWealth(-1*taxAmt);
   }
+
+  isOwnable() {
+    return false;
+  }
 }
 
 module.exports = Tax;

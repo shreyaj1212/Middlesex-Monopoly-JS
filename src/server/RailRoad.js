@@ -13,7 +13,12 @@ class RailRoad {//extends Ownable{
     this.name = name;
     this.position = position;
     this.rent = 25;
+    this.owner = null;
     this.price = 200;
+  }
+
+  getOwner() {
+    return this.owner;
   }
 
   getRent(diceRoll){
@@ -22,6 +27,10 @@ class RailRoad {//extends Ownable{
 
   setRent(x) {
     this.rent =x;
+  }
+
+  isOwnable() {
+    return true;
   }
 }
 
